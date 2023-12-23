@@ -87,6 +87,18 @@ Agora vamos clonar o repositório de configurações.
 git clone <meu_repo> ~/.config/nvim
 ```
 
+## Plugin manager Lazzy
+
+Após clonar o repositório tudo deve estar funcionando perfeitamante. Ou seja, 
+todos os plugins instalados e prontos para uso.
+
+O lazy possui uma interface que permite que atualize, intale e remova plugins.
+
+Para abri o Lazy no neovim basta digitar Lazy no modo de comando.
+
+```vim
+:Lazy
+```
 <!---
 TODO
 
