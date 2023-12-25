@@ -113,7 +113,7 @@ keymap("", "<Leader>k>", "<ESC>v :m .-2<CR>==", opts)
 -- NVIM TREE
 
 -- Open and Close NvimTree
---keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", opts)
 
 
 -- BUFFERLINE
