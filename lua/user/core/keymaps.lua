@@ -47,7 +47,7 @@ keymap("v","<S-Tab>","<gv", opts)
 
 -- SAVE FINGERS
 
-keymap('n', '<Leader>w', ':update<CR>', opts)   -- Save changes
+keymap('n', '<Leader>s', ':update<CR>', opts)   -- Save changes
 keymap('n', '<Leader>q', ':quit<CR>', opts)     -- Quit Neovim
 
 
@@ -85,7 +85,7 @@ keymap("", '<Leader>P', '"*y', opts)        -- Paste from Primary Area NOTE: It 
 --     require 'user.core.linux_maps'
 -- end
 
--- Better window navigation <M is Alt
+-- Better window navigation <M is Ctrl
 -- Exemple: keymap("n", "<M-h>", "<C-w>h", opts)
 
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -98,14 +98,25 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Better Escape
 keymap("i", "jk", "<ESC>", opts)
 keymap("c", "jk", "<ESC>", opts)
+keymap("v", "jk", "<ESC>", opts)
+keymap("x", "jk", "<ESC>", opts)
 
--- Visual
--- Move text up and down <A is Alt
-keymap("", "<Leader>j>", "<ESC>v :m .+1<CR>==", opts)
-keymap("", "<Leader>k>", "<ESC>v :m .-2<CR>==", opts)
--- In visual mode move text with J and K    NOTE: maybe better option
--- keymap("x", "J", ":move '>+1gv-gv", opts)
--- keymap("x", "K", ":move '<-2gv-gv", opts)
+
+-- NORMAL and VISUAL modes
+-- Move text up and down <Leader>
+
+
+keymap("n", "<Leader>j", "<ESC>v :m .+1<CR>==", opts)
+keymap("n", "<Leader>k", "<ESC>v :m .-2<CR>==", opts)
+keymap("v", "<Leader>j", "<ESC>v :m .+1<CR>==", opts)
+keymap("v", "<Leader>k", "<ESC>v :m .-2<CR>==", opts)
+
+-- In V-Block mode move text with J and K
+-- NOTE: maybe better option but need review it
+
+-- keymap("x", "J", ":m .+1<CR>==", opts)
+-- keymap("x", "K", ":m .-2<CR>==", opts)
+
 
 
 -- PLUGINS Keymaps
@@ -116,31 +127,35 @@ keymap("", "<Leader>k>", "<ESC>v :m .-2<CR>==", opts)
 keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", opts)
 
 
+-- COMMENT
+-- The documentation can be find
+-- :h comment.plugmap
+
+
+vim.keymap.set('n', '<C-/>', '<Plug>(comment_toggle_linewise_current)', { remap = true })
+vim.keymap.set('v', '<C-/>', '<Plug>(comment_toggle_linewise_visual)', { remap = true })
+
+
+    -- Other samples to Comment.nvim
+    -- Comment with Alt or Cmd + /
+
+    -- vim.keymap.set('n', '<A/>', 'gcc', {remap = true })
+    -- vim.keymap.set('i', '<A-/>', '<ESC>gcc', {remap = true })
+    -- vim.keymap.set('v', '<A-/>', 'gc', {remap = true })
+    --vim.keymap.set('', '<Leader>/', 'gco', {remap = true })
+
 -- BUFFERLINE
 
 -- Navigate in Tabs
---keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)      -- Move next tab.
---keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)      -- Move previous tab.
+keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)      -- Move next tab.
+keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)      -- Move previous tab.
 --keymap('n', '<Leader>c', ':bdelete<CR>', opts)              -- Close Tab
 
 -- Todo Comment
-keymap('n', '<Leader>td', ':TodoLocList<CR>', opts)         -- Show Todo list in the project.
-keymap('n', '<Leader>tt', ':TodoTelescope<CR>', opts)       -- Show Todo list in anywhere.
+-- keymap('n', '<Leader>td', ':TodoLocList<CR>', opts)         -- Show Todo list in the project.
+-- keymap('n', '<Leader>tt', ':TodoTelescope<CR>', opts)       -- Show Todo list in anywhere.
 
 
--- COMMENT
--- Comment with Alt or Cmd + /
-
---vim.keymap.set('n', '<Leader>/', 'gcc', {remap = true })
---vim.keymap.set('i', '<Leader>/>', '<ESC>gcc', {remap = true })
---vim.keymap.set('v', '<Leader>/>', 'gc', {remap = true })
-
--- COMMENT
--- Comment with Alt or Cmd + /
-
--- vim.keymap.set('n', '<A/>', 'gcc', {remap = true })
--- vim.keymap.set('i', '<A-/>', '<ESC>gcc', {remap = true })
--- vim.keymap.set('v', '<A-/>', 'gc', {remap = true })
 
 -- TELESCOPE
 
