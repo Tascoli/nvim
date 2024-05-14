@@ -135,6 +135,11 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", opts)
 vim.keymap.set('n', '<C-/>', '<Plug>(comment_toggle_linewise_current)', { remap = true })
 vim.keymap.set('v', '<C-/>', '<Plug>(comment_toggle_linewise_visual)', { remap = true })
 
+-- TOOGLE TERMINAL
+
+-- Keymap is Crtl + t - Open and close toggleterm. The config is in
+-- plugins/toggleter.lua.
+
 
     -- Other samples to Comment.nvim
     -- Comment with Alt or Cmd + /
