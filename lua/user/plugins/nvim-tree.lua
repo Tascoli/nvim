@@ -12,7 +12,7 @@ return{
                 sort_by = "case_sensitive",
                 view = {
                     adaptive_size = true,
-                    width = 20,
+                    width = 10,
                  },
 
                 git = {

@@ -48,8 +48,6 @@ rm -rf ~/.cache/nvim
 ```
 
 
-## Dependências
-
 Antes de clonar este repositório é importante instalar algumas dependências para o perfeito funcionamento de alguns plugins.
 
 Escolha a maneira mais conveniente de instalar essas dependências de acordo com seu sistema operacional.
@@ -179,6 +177,54 @@ Para as propriedades e configurações do plugin, propriamente dito,  é interes
        }
 }
 ```
+--------------------------------------------------
+
+--------------------------------------------------
+
+
+# Plugins
+
+Espaço para observações sobre os plugins.
+
+## Nvim Tree keymaps
+
+Comandos básicos para NvimTree.
+
+|Default Keymaps |Command         |Descripion      |
+|:----           |     :----:     |:----           |
+|`H`             |toggle_dotfiles |toggle visibility of dotfiles via \|filters.dotfiles\| option|
+|`<C-t>`         |tabnew          |open the file in a new tab|
+|`<Tab>`         |preview         |open the file as a preview (keeps the cursor in the tree)|
+|`r`             |rename          |rename a file|
+|`a`             |create          |add a file; leaving a trailing `/` will add a directory|
+|`d`             |remove          |delete a file (will prompt for confirmation)|
+|`gy`            |copy_absolute_path|copy absolute path to system clipboard|
+|`q`             |close           |close tree window|
+|`W`             |collapse_all    |collapse the whole tree|
+
+
+Para saber mais `:h nvim-tree.lua`.
+
+## Todo-comments
+
+Keymap:
+
+<Ctrl + /> - Comment and Uncomment
+
+## Markdown
+
+Ainda não foi configurado atalhor para abrir o markdown-preview. Digite: `:MarkdownPreview`
+
+## ToggleTerm
+
+Keymap:
+
+<Ctrl - t> - Open/Close ToggleTerm
+
+<!-- Dependecies: -->
+<!---->
+<!-- - ripgrep -->
+
 
 <!---
 TODO
