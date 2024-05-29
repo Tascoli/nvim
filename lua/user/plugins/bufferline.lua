@@ -1,3 +1,7 @@
+-- Autor: Tadeu Ascoli
+-- Country: Brazil
+-- e-mail: tascoli@gmail.com
+
 return {
     {
         'akinsho/bufferline.nvim',
