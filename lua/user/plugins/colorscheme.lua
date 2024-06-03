@@ -21,14 +21,12 @@ return {
 
     {
     "martinsione/darkplus.nvim",
-        priority = 1000,
-        config = function()
-                -- load the colorscheme here
-                vim.cmd([[colorscheme darkplus]])
-        end,
+        -- priority = 1000,
+        -- config = function()
+        --         -- load the colorscheme here
+        --         vim.cmd([[colorscheme darkplus]])
+        -- end,
     },
-
-
 
 
 -- ONE_DARK
@@ -46,8 +44,7 @@ return {
 
     {
     "bluz71/vim-nightfly-guicolors",
-        -- priority = 1000, -- make sure to load this before all the other start plugins
-        -- config = function()
+        -- priority = 1000, -- make sure to load this before all the other start plugins config = function()
         --     -- load the colorscheme here
         --     vim.cmd([[colorscheme nightfly]])
         -- end,
@@ -68,22 +65,22 @@ return {
 
     {
     "EdenEast/nightfox.nvim",
-        -- priority = 1000,
-        -- setup = function()
-        --     require("nightfox").setup({
-        --     opition = {
-        --         stykes = {
-        --             comments = "italic",
-        --             keywords = "bold",
-        --             types = "italic, bold",
-        --         },
-        --     },
-        -- })
-        -- end,
-        -- config = function()
-        --     -- load the colorscheme here
-        --     vim.cmd([[colorscheme nightfox]])
-        -- end,
+        priority = 1000,
+        setup = function()
+            require("nightfox").setup({
+            opition = {
+                stykes = {
+                    comments = "italic",
+                    keywords = "bold",
+                    types = "italic, bold",
+                },
+            },
+        })
+        end,
+        config = function()
+            -- load the colorscheme here
+            vim.cmd([[colorscheme nightfox]])
+        end,
     },
 
 -- DOOM_ONE
@@ -127,4 +124,5 @@ return {
         -- end,
 
         },
+
 }
