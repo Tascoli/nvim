@@ -32,6 +32,12 @@ o.sidescrolloff = 8
 o.bs= "2"                           -- make backspace behave like normal again
 o.cursorline = true                 -- highlight the current line
 
+
+--  COPY AND PASTE
+
+o.clipboard = 'unnamedplus'
+
+
 -- Disable annoying beeping
 
 --o.belloff = true                    -- Specifies for which events the bell will not be rung.
