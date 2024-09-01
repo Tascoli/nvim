@@ -55,7 +55,7 @@ keymap('n', '<Leader>q', ':quit<CR>', opts)     -- Quit Neovim
 -- Removes highlight of your last search
 -- ``<M>`` stands for ``Modify or Alt`` and therefore ``<M-l>`` stands for ``Alt+l``
 
-keymap("","<C-l>","<ESC>:nohl<CR>", opts)       -- In any mode.
+keymap("","<Leader>l","<ESC>:nohl<CR>", opts)       -- In any mode.
 -- keymap("i","<M-l>","<ESC>:nohl<CR>", opts)
 -- keymap("v","<M-l>","<ESC>:nohl<CR>", opts)
 -- keymap("c","<M-l>","<ESC>:nohl<CR>", opts)
@@ -132,8 +132,8 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<cr>", opts)
 -- :h comment.plugmap
 
 
-vim.keymap.set('n', '<C-/>', '<Plug>(comment_toggle_linewise_current)', { remap = true })
-vim.keymap.set('v', '<C-/>', '<Plug>(comment_toggle_linewise_visual)', { remap = true })
+vim.keymap.set('n', '<Leader>/', '<Plug>(comment_toggle_linewise_current)', { remap = true })
+vim.keymap.set('v', '<Leader>/', '<Plug>(comment_toggle_linewise_visual)', { remap = true })
 
 -- TOOGLE TERMINAL
 
