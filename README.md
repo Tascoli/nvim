@@ -209,7 +209,7 @@ Para saber mais `:h nvim-tree.lua`.
 
 Keymap:
 
-<Ctrl + /> - Comment and Uncomment
+\<leader> + / - Comment and Uncomment
 
 ## Markdown
 
@@ -219,7 +219,7 @@ Ainda não foi configurado atalhor para abrir o markdown-preview. Digite: `:Mark
 
 Keymap:
 
-<Ctrl - t> - Open/Close ToggleTerm
+\<leader> +  t - Open/Close ToggleTerm
 
 <!-- Dependecies: -->
 <!---->
