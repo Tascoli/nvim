@@ -1,3 +1,6 @@
+-- Autor: Tadeu Ascoli
+-- Country: Brazil
+-- e-mail: tascoli@gmail.com
 
 
 -- Automatically source and re-compile packer whenever you save this init.lua
@@ -64,3 +67,18 @@ M.nvim_create_augroups(autoCommands)
 --    autocmd!
 --    autocmd BufWritePost plugins_setup.lua source <afile> | PackerSync
 -- autocmd('BufWritePost', {pattern = 'plugins_setup.lua', command = 'source <afile> | PackerSync'})
+
+
+-- Transparency without plugin
+-- vim.cmd [[
+--   highlight Normal guibg=none
+--   highlight NonText guibg=none
+--   highlight Normal ctermbg=none
+--   highlight NonText ctermbg=none
+-- ]]
+
+-- transparent background
+-- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
