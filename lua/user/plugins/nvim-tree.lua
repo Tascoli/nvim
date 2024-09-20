@@ -33,21 +33,20 @@ return{
                         symlink_arrow = " ➛ ",
                         glyphs = {
                             folder = {
-                                arrow_closed = "-", -- arrow when folder is closed
-                                arrow_open = "", -- arrow when folder is open
+                                arrow_closed = "󱦰", -- arrow when folder is closed
+                                arrow_open = "󱞩", -- arrow when folder is open
                             },
                         },
                         show = {
                             file = true,
                             folder = true,
-                            folder_arrow = true,
+                            folder_arrow = false,
                             git = false,
                         },
                     },
                 },
                 filters = {
-                    dotfiles = true,
-                },
+                    dotfiles = true, },
             })
         end,
 }
