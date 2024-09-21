@@ -25,7 +25,6 @@ mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
 
-
 #### Remover os arquivos de configuração:
 
 ```sh
@@ -44,7 +43,6 @@ rm -rf ~/.local/state/nvim
 rm -rf ~/.cache/nvim
 ```
 
-
 ## Neovim - Instalação
 
 Entre no site do [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) e faça a instalação conforme achar mais conveniente.
@@ -60,6 +58,7 @@ Escolha a maneira mais conveniente de instalar essas dependências de acordo com
 - Make e cmake
 - Python e pip
 - Nodejs e npm
+- Ripgrep
 - Rust e Cargo
 - On mac install `pbcopy` or on linux install `xsel` should be builtin to fixing copy and paste.
 
@@ -184,12 +183,6 @@ Para as propriedades e configurações do plugin, propriamente dito,  é interes
 --------------------------------------------------
 
 -------------------------------------------------
-
-
-
-
-
-
 ## General Keymaps
 
 Configuração de alguns atalhos para o neovim.
@@ -287,6 +280,18 @@ Keymap:
 
 Ainda não foi configurado atalhor para abrir o markdown-preview. Digite: `:MarkdownPreview`
 
+## Telescope
+
+TABEL MODEL
+|MODE               |Keymaps      |Command            |Descripion      |
+|:----:             |:----        |     :----:        |:----           |
+|**Any**              |` `  |` `      |     |
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 <!-- Dependecies: -->
 <!---->
