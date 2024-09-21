@@ -18,7 +18,7 @@ o.splitright = true                 -- force all vertical splits to go to the ri
 
 -- Useful settings
 
-o.history = 700                     --A history of ":" commands, and a history of previous search patterns is remembered. 
+o.history = 700                     --A history of ":" commands, and a history of previous search patterns is remembered.
 o.undofile = true                   -- enable persistent undo
 o.undolevels=700
 
@@ -45,18 +45,18 @@ o.clipboard = 'unnamedplus'
 --APARENCIA
 
 -- Global
-o.title = true                    -- when on, the title of the window will be set to the value of 'titlestring' 
+o.title = true                    -- when on, the title of the window will be set to the value of 'titlestring'
 o.showmode = false                -- we don't need to see things like -- INSERT -- anymore
 o.showcmd = false                 -- show (partial) command in the last line of the screen.
 o.laststatus = 3                  -- have a global statusline at the bottom instead of one for each window
 o.showtabline = 0                 -- always show tabs
 o.cmdheight = 1                   -- more space in the neovim command line for displaying messages
-o.ruler = false                   -- show the line and column number of the cursor position, separated by a comma. 
+o.ruler = false                   -- show the line and column number of the cursor position, separated by a comma.
 
 -- Showing line numbers, length and wrap
 
 o.number = true                     -- show line numbers
-o.relativenumber = false            -- set relative numbered lines
+o.relativenumber = true             -- set relative numbered lines
 o.numberwidth = 4                   -- set number column width to 2 {default 4}
 o.showbreak = ">>>"                 -- add ">>>" when line wrapping ex: "..." or "+++"
 --o.textwidth = 79                    -- max. width of text in document (used by gd)
