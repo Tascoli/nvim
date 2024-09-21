@@ -7,9 +7,6 @@ O plugin manager escolhido para esse projeto foi o **Lazy**.
 Para informações mais detalhadas vá até a página do [LAZY](https://github.com/folke/lazy.nvim) no Github.
 
 
-## Neovim - Instalação
-
-Entre no site do [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) e faça a instalação conforme achar mais conveniente.
 
 
 ## Configurações anteriores
@@ -48,7 +45,14 @@ rm -rf ~/.cache/nvim
 ```
 
 
+## Neovim - Instalação
+
+Entre no site do [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) e faça a instalação conforme achar mais conveniente.
+
+### Dependências
+
 Antes de clonar este repositório é importante instalar algumas dependências para o perfeito funcionamento de alguns plugins.
+
 
 Escolha a maneira mais conveniente de instalar essas dependências de acordo com seu sistema operacional.
 
@@ -179,16 +183,73 @@ Para as propriedades e configurações do plugin, propriamente dito,  é interes
 ```
 --------------------------------------------------
 
---------------------------------------------------
+-------------------------------------------------
 
 
-# Plugins
+
+
+
+
+## General Keymaps
+
+Configuração de alguns atalhos para o neovim.
+`<Leader>` is ***space***.
+
+#### Generic
+
+|MODE               |Keymaps      |Command            |Descripion      |
+|:----:             |:----        |     :----:        |:----           |
+|**I - C - V - X**  | `jk`        | `<ESC>`          | j and k fast is the same thing than ESCAPE |
+|**N**              |`<Leader>s`  |`:update<CR>`      | Save changes |
+|**N**              |`<Leader>q`  |`:quit<CR>`        | Quit NeovoimSave changes |
+|**Any**            |`<Leader>l`  |`<ESC>:nohl<CR>`   |  Removes highlight of your last search|
+
+#### Split window
+
+|MODE               |Keymaps      |Command            |Descripion      |
+|:----:             |:----        |     :----:        |:----           |
+|**N**              |`<Leader>sv` |`<C-w>v`      | Split window vertically     |
+|**N**              |`<Leader>sh` |`<C-w>s`      | Split windwo horizontally   |
+
+
+#### Navigate
+
+|MODE               |Keymaps      |Command            |Descripion      |
+|:----:             |:----        |     :----:        |:----           |
+|**N**              |`<Shift>l `  |` `      | Move to tab right  |
+|**N**              |`<Shift>h `  |` `      | Move to tab left  |
+|**N**              |` `  |` `      | Close tab LOADING... |
+|**N**              |`<C-h>`      |`<C-w>h`      | Move to window left   |
+|**N**              |`<C-j>`      |`<C-w>j`      | Move to window down   |
+|**N**              |`<C-h>k`     |`<C-w>k`      | Move to window up     |
+|**N**              |`<C-h>l`     |`<C-w>l`      | Move to window right  |
+
+
+
+#### Copy and paste
+
+
+|MODE               |Keymaps      |Command            |Descripion      |
+|:----:             |:----        |     :----:        |:----           |
+|**Any**            |`<Leader>y`  |`"+y`   | Copy to Clipboard |
+|**Any**            |`<Leader>p`  |`"+p`   | Paste from Clipboard |
+|**Any**            |`<Leader>Y`  |`"*y`   | Copy to Primary Area |
+|**Any**            |`<Leader>P`  |`"*p`   | Paste from Primary Area |
+
+
+<!-- TABEL MODEL  -->
+<!-- |MODE               |Keymaps      |Command            |Descripion      | -->
+<!-- |:----:             |:----        |     :----:        |:----           | -->
+<!-- |**N**              |` `  |` `      |     | -->
+
+## Plugins Keymaps
 
 Espaço para observações sobre os plugins.
 
 ## Nvim Tree keymaps
 
 Comandos básicos para NvimTree.
+
 
 |Default Keymaps |Command         |Descripion      |
 |:----           |     :----:     |:----           |
@@ -205,6 +266,17 @@ Comandos básicos para NvimTree.
 
 Para saber mais `:h nvim-tree.lua`.
 
+## ToggleTerm
+
+<!-- TABEL MODEL  -->
+<!-- |MODE               |Keymaps      |Command            |Descripion      | -->
+<!-- |:----:             |:----        |     :----:        |:----           | -->
+<!-- |**Any**              |` `  |` `      |     | -->
+
+Keymap:
+
+\<leader> +  t - Open/Close ToggleTerm
+
 ## Todo-comments
 
 Keymap:
@@ -215,11 +287,6 @@ Keymap:
 
 Ainda não foi configurado atalhor para abrir o markdown-preview. Digite: `:MarkdownPreview`
 
-## ToggleTerm
-
-Keymap:
-
-\<leader> +  t - Open/Close ToggleTerm
 
 <!-- Dependecies: -->
 <!---->
