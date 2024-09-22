@@ -190,44 +190,51 @@ Configuração de alguns atalhos para o neovim.
 
 #### Generic
 
-|MODE               |Keymaps      |Command            |Descripion      |
-|:----:             |:----        |     :----:        |:----           |
-|**I - C - V - X**  | `jk`        | `<ESC>`          | j and k fast is the same thing than ESCAPE |
-|**N**              |`<Leader>s`  |`:update<CR>`      | Save changes |
-|**N**              |`<Leader>q`  |`:quit<CR>`        | Quit NeovoimSave changes |
-|**Any**            |`<Leader>l`  |`<ESC>:nohl<CR>`   |  Removes highlight of your last search|
+|MODE               |Keymaps      |Command          |Descripion                                  |
+|:----:             |:----        |:----:           |:----                                       |
+|**I - C - V - X**  | `jk`        | `<ESC>`         | j and k fast is the same thing than ESCAPE |
+|**N**              |`<Leader>s`  |`:update<CR>`    | Save changes                               |
+|**N**              |`<Leader>q`  |`:quit<CR>`      | Quit NeovoimSave changes                   |
+|**Any**            |`<Leader>l`  |`<ESC>:nohl<CR>` | Removes highlight of your last search     |
 
 #### Split window
 
-|MODE               |Keymaps      |Command            |Descripion      |
-|:----:             |:----        |     :----:        |:----           |
-|**N**              |`<Leader>sv` |`<C-w>v`      | Split window vertically     |
-|**N**              |`<Leader>sh` |`<C-w>s`      | Split windwo horizontally   |
+|MODE     |Keymaps      |Command       |Descripion                   |
+|:----:   |:----        |:----:        |:----                        |
+|**N**    |`<Leader>sv` |`<C-w>v`      | Split window vertically     |
+|**N**    |`<Leader>sh` |`<C-w>s`      | Split windwo horizontally   |
 
 
 #### Navigate
 
-|MODE               |Keymaps      |Command            |Descripion      |
-|:----:             |:----        |     :----:        |:----           |
-|**N**              |`<Shift>l `  |` `      | Move to tab right  |
-|**N**              |`<Shift>h `  |` `      | Move to tab left  |
-|**N**              |` `  |` `      | Close tab LOADING... |
-|**N**              |`<C-h>`      |`<C-w>h`      | Move to window left   |
-|**N**              |`<C-j>`      |`<C-w>j`      | Move to window down   |
-|**N**              |`<C-h>k`     |`<C-w>k`      | Move to window up     |
-|**N**              |`<C-h>l`     |`<C-w>l`      | Move to window right  |
+|MODE               |Keymaps      |Command  |Descripion             |
+|:----:             |:----        |:----:   |:----                  |
+|**N**              |`<Shift>l `  |` `      | Move to tab right     |
+|**N**              |`<Shift>h `  |` `      | Move to tab left      |
+|**N**              |` `          |` `      | Close tab LOADING...  |
+|**N**              |`<C-h>`      |`<C-w>h` | Move to window left   |
+|**N**              |`<C-j>`      |`<C-w>j` | Move to window down   |
+|**N**              |`<C-h>k`     |`<C-w>k` | Move to window up     |
+|**N**              |`<C-h>l`     |`<C-w>l` | Move to window right  |
 
 
+#### Increment / Decrement Numbers
+
+
+|MODE        |Keymaps      |Command   |Descripion |
+|:----:      |:----        |:----:    |:----      |
+|**Any**     |`<Leader>=`  |`<C-a>`   | Increment |
+|**Any**     |`<Leader>-`  |`<C-x>`   | Decrement |
 
 #### Copy and paste
 
 
-|MODE               |Keymaps      |Command            |Descripion      |
-|:----:             |:----        |     :----:        |:----           |
-|**Any**            |`<Leader>y`  |`"+y`   | Copy to Clipboard |
-|**Any**            |`<Leader>p`  |`"+p`   | Paste from Clipboard |
-|**Any**            |`<Leader>Y`  |`"*y`   | Copy to Primary Area |
-|**Any**            |`<Leader>P`  |`"*p`   | Paste from Primary Area |
+|MODE       |Keymaps      |Command |Descripion               |
+|:----:     |:----        | :----: |:----                    |
+|**Any**    |`<Leader>y`  |`"+y`   | Copy to Clipboard       |
+|**Any**    |`<Leader>p`  |`"+p`   | Paste from Clipboard    |
+|**Any**    |`<Leader>Y`  |`"*y`   | Copy to Primary Area    |
+|**Any**    |`<Leader>P`  |`"*p`   | Paste from Primary Area |
 
 
 <!-- TABEL MODEL  -->

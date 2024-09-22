@@ -55,6 +55,12 @@ keymap('n', '<Leader>q', ':quit<CR>', opts)     -- Quit Neovim
 
 keymap("","<Leader>l","<ESC>:nohl<CR>", opts)       -- In any mode.
 
+-- INCREMENT / DECREMENT NUMBERS
+-------------------------------
+
+keymap("","<Leader>=", "<C-a>", opts)
+keymap("","<Leader>-", "<C-x>", opts)
+
 --   COPY AND PASTE
 -- ----------------------
 
