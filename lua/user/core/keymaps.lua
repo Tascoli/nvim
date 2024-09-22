@@ -76,7 +76,7 @@ keymap("", '<Leader>P', '"*p', opts)        -- Paste from Primary Area
 
 keymap("n","<Tab>",">>_", opts)
 keymap("n","<S-Tab>","<<_", opts)
-keymap("i","<S-Tab>","<C-D>", opts)
+keymap("i","<S-Tab>","<C-d>", opts)
 keymap("v","<Tab>",">gv", opts)
 keymap("v","<S-Tab>","<gv", opts)
 
