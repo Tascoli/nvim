@@ -46,8 +46,9 @@ keymap("x", "jk", "<ESC>", opts)
 -- SAVE FINGERS
 ---------------
 
-keymap('n', '<Leader>s', ':update<CR>', opts)   -- Save changes
-keymap('n', '<Leader>q', ':quit<CR>', opts)     -- Quit Neovim
+keymap('n', '<Leader>s', ':update<CR>', opts)           -- Save changes
+keymap('n', '<Leader>q', ':quit<CR>', opts)             -- Quit Neovim
+keymap('n', '<Leader>x', '<cmd>tabclose<CR>',opts)      -- close current tab
 
 -- BIND NOHL
 -------------

@@ -190,12 +190,13 @@ Configuração de alguns atalhos para o neovim.
 
 #### Generic
 
-|MODE               |Keymaps      |Command          |Descripion                                  |
-|:----:             |:----        |:----:           |:----                                       |
-|**I - C - V - X**  | `jk`        | `<ESC>`         | j and k fast is the same thing than ESCAPE |
-|**N**              |`<Leader>s`  |`:update<CR>`    | Save changes                               |
-|**N**              |`<Leader>q`  |`:quit<CR>`      | Quit NeovoimSave changes                   |
-|**Any**            |`<Leader>l`  |`<ESC>:nohl<CR>` | Removes highlight of your last search     |
+|MODE               |Keymaps      |Command             |Descripion                                  |
+|:----:             |:----        |:----:              |:----                                       |
+|**I - C - V - X**  | `jk`        | `<ESC>`            | j and k fast is the same thing than ESCAPE |
+|**N**              |`<Leader>s`  |`:update<CR>`       | Save changes                               |
+|**N**              |`<Leader>q`  |`:quit<CR>`         | Quit NeovoimSave changes                   |
+|**N**              |`<Leader>x ` |`<cmd>tabclose<CR>` | Close tab                                  |
+|**Any**            |`<Leader>l`  |`<ESC>:nohl<CR>`    | Removes highlight of your last search      |
 
 #### Split window
 
@@ -211,7 +212,6 @@ Configuração de alguns atalhos para o neovim.
 |:----:             |:----        |:----:   |:----                  |
 |**N**              |`<Shift>l `  |` `      | Move to tab right     |
 |**N**              |`<Shift>h `  |` `      | Move to tab left      |
-|**N**              |` `          |` `      | Close tab LOADING...  |
 |**N**              |`<C-h>`      |`<C-w>h` | Move to window left   |
 |**N**              |`<C-j>`      |`<C-w>j` | Move to window down   |
 |**N**              |`<C-h>k`     |`<C-w>k` | Move to window up     |
