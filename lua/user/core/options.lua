@@ -12,7 +12,7 @@ o.termguicolors = true              -- set term gui colors (most terminals suppo
 o.swapfile = false                  -- If true creates a swapfile
 o.backup = false                    -- creates a backup file
 --o.writebackup = false               -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-o.timeoutlen = 300                  -- time to wait for a mapped sequence to complete (in milliseconds)
+o.timeoutlen = 400                  -- time to wait for a mapped sequence to complete (in milliseconds)
 o.splitbelow = true                 -- force all horizontal splits to go below current window
 o.splitright = true                 -- force all vertical splits to go to the right of current window
 
@@ -64,8 +64,8 @@ o.wrap = false                      -- if false don't automatically wrap on load
 o.wrapmargin = 4                    -- number of characters from the right window border where wrappingstarts.  When typing text beyond this limit, an <EOL> will be inserted and inserting continues on the next line.
 o.formatoptions = "l"               -- don't automatically wrap text when typing
 o.linespace = 4                     -- add some line space for easy reading
-o.colorcolumn = "80"
---o.colorcolumn = "120"
+-- o.colorcolumn = "80"
+o.colorcolumn = "120"
 --o.conceallevel = 0               -- so that `` is visible in markdown files
 
 
