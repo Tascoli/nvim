@@ -42,6 +42,8 @@ return{
                             folder = {
                                 arrow_closed = "󱦰", -- arrow when folder is closed
                                 arrow_open = "󱞩", -- arrow when folder is open
+                                -- arrow_closed = "", -- arrow when folder is closed
+                                -- arrow_open = "", -- arrow when folder is open
                             },
                         },
                         show = {
@@ -51,6 +53,14 @@ return{
                             git = false,
                         },
                     },
+
+                    -- actions = {
+                    --     open_file = {
+                    --         window_picker = {
+                    --             enable = false,
+                    --         },
+                    --     },
+                    -- },
                 },
                 filters = {
                     dotfiles = true, },
