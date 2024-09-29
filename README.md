@@ -341,6 +341,11 @@ Many familiar mapping patterns are set up as defaults.
 | `<C-r><C-l>`   | Insert cline in original window into prompt (insert mode) |
 
 
+### Todo Plugin
+
+`<leader>td` - TodoLocList
+`<leader>tt` - TodoTelescope
+
 <!-- Dependecies: -->
 <!---->
 <!-- - ripgrep -->

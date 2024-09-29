@@ -171,17 +171,23 @@ keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)      -- Move next tab.
 keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)      -- Move previous tab.
 --keymap('n', '<Leader>c', ':bdelete<CR>', opts)              -- Close Tab
 
--- Todo Comment
--- keymap('n', '<Leader>td', ':TodoLocList<CR>', opts)         -- Show Todo list in the project.
--- keymap('n', '<Leader>tt', ':TodoTelescope<CR>', opts)       -- Show Todo list in anywhere.
-
-
 
 -- TELESCOPE
----------------------
+---------------
 -- Settings in telescope.lua
+
 keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
+
+-- TODO COMMENT
+-----------------
+
+
+keymap("n", "<Leader>td", "<cmd>TodoLocList<CR>", opts)         -- Show Todo list in the project.
+keymap("n", "<leader>tt", "<cmd>TodoTelescope<CR>", opts)       -- Show Todo list in anywhere.
+
+
+
 
