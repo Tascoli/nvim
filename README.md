@@ -56,6 +56,7 @@ Escolha a maneira mais conveniente de instalar essas dependências de acordo com
 
 - Git
 - Make e cmake
+- Lua e Luarocks
 - Python e pip
 - Nodejs e npm
 - Ripgrep and fd for telescope
