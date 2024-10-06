@@ -7,13 +7,11 @@ O plugin manager escolhido para esse projeto foi o **Lazy**.
 Para informações mais detalhadas vá até a página do [LAZY](https://github.com/folke/lazy.nvim) no Github.
 
 
-
-
 ## Configurações anteriores
 
 No caso de já ter instalado anteriormente o neovim é recomendado uma das seguintes opções:
 
-#### Fazer o backup dos arquivos configuração:
+##### Fazer o backup dos arquivos configuração:
 
 ```sh
 # required
@@ -25,7 +23,7 @@ mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
 
-#### Remover os arquivos de configuração:
+##### Remover os arquivos de configuração:
 
 ```sh
 rm -rf ~/.config/nvim ~/.local/share/nvim
@@ -43,11 +41,11 @@ rm -rf ~/.local/state/nvim
 rm -rf ~/.cache/nvim
 ```
 
-## Neovim - Instalação
+## Instalando Neovim
 
 Entre no site do [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) e faça a instalação conforme achar mais conveniente.
 
-### Dependências
+##### Dependências
 
 Antes de clonar este repositório é importante instalar algumas dependências para o perfeito funcionamento de alguns plugins.
 
@@ -89,7 +87,7 @@ Agora vamos clonar o repositório de configurações.
 git clone <meu_repo> ~/.config/nvim
 ```
 
-## Plugin manager Lazzy
+## Lazzy - Plugin manager
 
 Após clonar o repositório tudo deve estar funcionando perfeitamante. Ou seja, todos os plugins instalados e prontos para uso.
 
@@ -185,13 +183,15 @@ Para as propriedades e configurações do plugin, propriamente dito,  é interes
 ### Referências
 
 [Lua Language Docs](https://www.lua.org/docs.html)
+
 [Neovim Docs Lua](https://neovim.io/doc/user/lua.html)
+
 [nvim-lua-guide](https://github.com/ellisonleao/nvim-lua-guide)
 
 -------------------------------------------------
 -------------------------------------------------
 
-## General Keymaps
+### General Keymaps
 
 Configuração de alguns atalhos para o neovim.
 `<Leader>` is ***space***.
@@ -203,7 +203,7 @@ Configuração de alguns atalhos para o neovim.
 |**I - C - V - X**  | `jk`        | `<ESC>`            | j and k fast is the same thing than ESCAPE |
 |**N**              |`<Leader>s`  |`:update<CR>`       | Save changes                               |
 |**N**              |`<Leader>q`  |`:quit<CR>`         | Quit NeovoimSave changes                   |
-|**N**              |`<Leader>x ` |`<cmd>tabclose<CR>` | Close tab                                  |
+|**N**              |`<Leader>x ` |`:bd<CR>`           | Delete buffer (Close tab                   |
 |**Any**            |`<Leader>l`  |`<ESC>:nohl<CR>`    | Removes highlight of your last search      |
 
 #### Split window
@@ -234,8 +234,8 @@ Configuração de alguns atalhos para o neovim.
 |**Any**     |`<Leader>=`  |`<C-a>`   | Increment |
 |**Any**     |`<Leader>-`  |`<C-x>`   | Decrement |
 
-#### Copy and paste
 
+#### Copy and paste
 
 |MODE       |Keymaps      |Command |Descripion               |
 |:----:     |:----        | :----: |:----                    |
@@ -250,11 +250,11 @@ Configuração de alguns atalhos para o neovim.
 <!-- |:----:             |:----        |     :----:        |:----           | -->
 <!-- |**N**              |` `  |` `      |     | -->
 
-## Plugins Keymaps
+### Plugins Keymaps
 
 Espaço para observações sobre os plugins.
 
-## Nvim Tree keymaps
+#### Nvim Tree keymaps
 
 Comandos básicos para NvimTree.
 
@@ -274,7 +274,7 @@ Comandos básicos para NvimTree.
 
 Para saber mais `:h nvim-tree.lua`.
 
-## ToggleTerm
+#### ToggleTerm
 
 <!-- TABEL MODEL  -->
 <!-- |MODE               |Keymaps      |Command            |Descripion      | -->
@@ -285,17 +285,24 @@ Keymap:
 
 \<leader> +  t - Open/Close ToggleTerm
 
-## Todo-comments
+#### Comments
 
 Keymap:
 
 \<leader> + / - Comment and Uncomment
 
-## Markdown
+#### TODO Comments
+
+|MODE               |Keymaps       |Command                 |Descripion    |
+|:----:             |:----         |     :----:             |:----         |
+|**N**              |`<leader>td`  |`<cmd>TodoLocList<CR> ` |TodoLocList   |
+|**N**              |`<leader>tt`  |`<cmd>TodoLocList<CR> ` |TodoTelescope |
+
+#### Markdown
 
 Ainda não foi configurado atalhor para abrir o markdown-preview. Digite: `:MarkdownPreview`
 
-## Telescope
+#### Telescope
 
 |MODE      |Keymaps       |Command                                                 |Descripion           |
 |:----:    |:----         |     :----:                                             |:----                |
@@ -305,7 +312,7 @@ Ainda não foi configurado atalhor para abrir o markdown-preview. Digite: `:Mark
 |**N**     |`<leader>fh`  |`<cmd>lua require('telescope.builtin').help_tags()<cr>` |Telescope help tags  |
 
 
-## Default Mappings
+##### Default Mappings
 
 Mappings are fully customizable.
 Many familiar mapping patterns are set up as defaults.
@@ -341,10 +348,9 @@ Many familiar mapping patterns are set up as defaults.
 | `<C-r><C-l>`   | Insert cline in original window into prompt (insert mode) |
 
 
-### Todo Plugin
 
-`<leader>td` - TodoLocList
-`<leader>tt` - TodoTelescope
+
+
 
 <!-- Dependecies: -->
 <!---->
