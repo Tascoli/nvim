@@ -2,14 +2,71 @@
 -- Country: Brazil
 -- e-mail: tascoli@gmail.com
 
+-- File: config/autocmds.lua
+-- Description: Autocommand functions
+-- Author: Kien Nguyen-Tuan <kiennt2609@gmail.com>
+-- Define autocommands with Lua APIs
+-- See: h:api-autocmd, h:augroup
+local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
--- Automatically source and re-compile packer whenever you save this init.lua
---local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
---vim.api.nvim_create_autocmd('BufWritePost', {
---  command = 'source <afile> | PackerCompile',
---  group = packer_group,
---  pattern = vim.fn.expand '$MYVIMRC',
---})
+-- General settings
+
+-- Highlight on yank
+autocmd("TextYankPost", {
+    callback = function()
+        vim.highlight.on_yank({
+            higroup = "IncSearch",
+            timeout = "1000"
+        })
+    end
+})
+
+-- Remove whitespace on save
+autocmd("BufWritePre", {
+    pattern = "",
+    command = ":%s/\\s\\+$//e"
+})
+
+-- -- Auto format on save using the attached (optionally filtered) language servere clients
+-- -- https://neovim.io/doc/user/lsp.html#vim.lsp.buf.format()
+-- autocmd("BufWritePre", {
+--     pattern = "",
+--     command = ":silent lua vim.lsp.buf.format()"
+-- })
+
+-- -- Don"t auto commenting new lines
+-- autocmd("BufEnter", {
+--     pattern = "",
+--     command = "set fo-=c fo-=r fo-=o"
+-- })
+
+-- Set two spaces idendetion by filetype
+autocmd("Filetype", {
+    pattern = {"xml", "html", "xhtml", "css", "scss", "javascript", "typescript", "yml", "yaml", "lua"},
+    command = "setlocal shiftwidth=2 tabstop=2"
+})
+
+-- Set colorcolumn
+autocmd("Filetype", {
+    pattern = {"python", "rst", "c", "cpp"},
+    command = "set colorcolumn=80"
+})
+
+-- Set autowrap and splel by filetype
+autocmd("Filetype", {
+    pattern = {"gitcommit", "markdown", "text"},
+    callback = function()
+        vim.opt_local.wrap = true
+        vim.opt_local.spell = true
+    end
+})
+
+
+
+
+
+
 
 -- SHOW WHITHESPACE
 -- MUST be inserted BEFORE the colorscheme command
@@ -19,45 +76,6 @@ vim.cmd [[autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red]
 vim.cmd [[autocmd InsertLeave * match ExtraWhitespace /\s\+$/]]
 
 
--- Treesitter Setup
---
--- vim.opt.foldmethod     = 'expr'
--- vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
----WORKAROUND
-    -- vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEnter'}, {
-    -- group = vim.api.nvim_create_augroup('TS_FOLD_WORKAROUND', {}),
-    --     callback = function()
-    --         vim.opt.foldmethod     = 'expr'
-    --         vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
-    --     end
-    -- })
----ENDWORKAROUND
-local vim = vim
-local api = vim.api
-local M = {}
--- function to create a list of commands and convert them to autocommands
--------- This function is taken from https://github.com/norcalli/nvim_utils
-function M.nvim_create_augroups(definitions)
-    for group_name, definition in pairs(definitions) do
-        api.nvim_command('augroup '..group_name)
-        api.nvim_command('autocmd!')
-        for _, def in ipairs(definition) do
-            local command = table.concat(vim.tbl_flatten{'autocmd', def}, ' ')
-            api.nvim_command(command)
-        end
-        api.nvim_command('augroup END')
-    end
-end
-
-
-local autoCommands = {
-    -- other autocommands
-    open_folds = {
-        {"BufReadPost,FileReadPost", "*", "normal zR"}
-    }
-}
-
-M.nvim_create_augroups(autoCommands)
 
 
 -- TODO: - Review autocommand
