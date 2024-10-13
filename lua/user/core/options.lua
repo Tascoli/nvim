@@ -67,7 +67,20 @@ o.linespace = 4                     -- add some line space for easy reading
 -- o.colorcolumn = "80"
 o.colorcolumn = "120"
 --o.conceallevel = 0               -- so that `` is visible in markdown files
-
+--
+o.list = true
+-- You can also add "space" or "eol", but I feel it"s quite annoying
+o.listchars = {
+    -- tab = "┊ ",
+    -- trail = "·",
+    -- extends = "»",
+    -- precedes = "«",
+    -- nbsp = "×",
+    space = "•",
+    -- eol = ""
+    eol = "󱞥"
+}
+--set listchars=tab:→\ ,eol:,nbsp:␣,trail:•,space:•
 
 
 --vim.highlight.create('ColorColumn', {ctermbg=234, guibg=lightgrey}, false)

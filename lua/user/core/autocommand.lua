@@ -63,9 +63,13 @@ autocmd("Filetype", {
 })
 
 
-
-
-
+-- Set list character equal false by file type
+autocmd("Filetype", {
+    pattern = {"gitcommit", "markdown", "text"},
+    callback  = function ()
+      vim.opt.list = false
+    end
+})
 
 
 -- SHOW WHITHESPACE
