@@ -1,15 +1,16 @@
 # README
 
-Este repositório destinado as minha configurações pessoais do Neovim.
+Este repositório destinado as minhas configurações pessoais do Neovim.
 
 O plugin manager escolhido para esse projeto foi o **Lazy**.
 
 Para informações mais detalhadas vá até a página do [LAZY](https://github.com/folke/lazy.nvim) no Github.
 
-
 ## Configurações anteriores
 
 No caso de já ter instalado anteriormente o neovim é recomendado uma das seguintes opções:
+<details>
+  <summary>Backup configurações:</summary>
 
 ##### Fazer o backup dos arquivos configuração:
 
@@ -22,6 +23,10 @@ mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
+</details>
+
+<details>
+  <summary>Removendo configurações anteriores:</summary>
 
 ##### Remover os arquivos de configuração:
 
@@ -40,6 +45,7 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.cache/nvim
 ```
+</details>
 
 ## Instalando Neovim
 
@@ -48,7 +54,6 @@ Entre no site do [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovi
 ##### Dependências
 
 Antes de clonar este repositório é importante instalar algumas dependências para o perfeito funcionamento de alguns plugins.
-
 
 Escolha a maneira mais conveniente de instalar essas dependências de acordo com seu sistema operacional.
 
@@ -61,6 +66,9 @@ Escolha a maneira mais conveniente de instalar essas dependências de acordo com
 - Rust e Cargo
 - On mac install `pbcopy` or on linux install `xsel` should be builtin to fixing copy and paste.
 
+<details>
+  <summary>Node e npm</summary>
+
 Após instalar o **Node** e o **npm** devemos fazer alguns ajustes para evitar erros de permissões.
 
 ```sh
@@ -72,6 +80,11 @@ npm install -g jshint &&
 NPM_CONFIG_PREFIX=~/.npm-global
 ```
 
+</details>
+
+<details>
+  <summary>Rust</summary>
+
 Para instalar o **Rust** execute o seguinte comando:
 
 ```sh
@@ -79,30 +92,35 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh &&
 echo "export PATH=~/.cargo/bin/:$PATH" >> .bashrc # Permanently change PATH
 ```
 
+</details>
+
 ## Clonando o repositório
 
-Agora vamos clonar o repositório de configurações.
+Agora vamos clonar o repositório com as configurações.
 
 ```Sh
-git clone <meu_repo> ~/.config/nvim
+git clone git@github.com:Tascoli/nvim.git ~/.config/nvim
 ```
+
+Este repositório conta com os dicionários de português e inglês, sendo o de português como padrão. Os atalhos para o uso do **spellchecker**
+estão na sessão de keymaps adiante.
+<!-- Para mais detalhes https://neovim.io/doc/user/spell.html -->
 
 ## Lazzy - Plugin manager
 
-Após clonar o repositório tudo deve estar funcionando perfeitamante. Ou seja, todos os plugins instalados e prontos para uso.
+Após clonar o repositório tudo deve estar funcionando perfeitamente. Ou seja, todos os plugins instalados e prontos para uso.
 
-O lazy possui uma interface que permite que atualize, intale e remova plugins.
+O Lazy possui uma interface que permite que atualize, instale e remova plugins de maneira fácil.
 
-Para abri o Lazy no neovim basta digitar Lazy no modo de comando.
-
-```vim
-:Lazy
-```
+Para abrir o Lazy no neovim basta digitar `:Lazy` no modo de comando.
 
 O arquivo `.config/nvim/lua/user/lazy_conf.lua` que contém o bootstrap do Lazy e sua configuração básica. É nele que também
 é definido quais pastas o Lazy irá buscar os arquivos.
 
 Para adicionar um **novo** plugin devemos coloca-lo dentro de um novo arquivo(com o nome do plugin) e move-lo para a pasta `plugins`. A estrutura básica do arquivo deve seguir o exemplo abaixo:
+
+<details>
+  <summary>Exemplo Colorscheme </summary>
 
 ```lua
     return {
@@ -117,12 +135,15 @@ Para adicionar um **novo** plugin devemos coloca-lo dentro de um novo arquivo(co
             end,
         }
     }
-```
+````
+</details>
 
 Note que no exemplo acima o **nome do repositório** do plugin está entre *" "* e é separado por **vírgula** das demais  propriedades do lazy para aquele plugin.
 
 Para as propriedades e configurações do plugin, propriamente dito,  é interessante criar uma função chamada **config** como no exemplo abaixo.
 
+<details>
+  <summary>Exemplo Config </summary>
 
 ```lua
     return{
@@ -180,6 +201,9 @@ Para as propriedades e configurações do plugin, propriamente dito,  é interes
        }
 }
 ```
+
+</details>
+
 ### Referências
 
 [Lua Language Docs](https://www.lua.org/docs.html)
@@ -213,7 +237,6 @@ Configuração de alguns atalhos para o neovim.
 |**N**    |`<Leader>sv` |`<C-w>v`      | Split window vertically     |
 |**N**    |`<Leader>sh` |`<C-w>s`      | Split windwo horizontally   |
 
-
 #### Navigate
 
 |MODE               |Keymaps      |Command  |Descripion             |
@@ -225,15 +248,12 @@ Configuração de alguns atalhos para o neovim.
 |**N**              |`<C-h>k`     |`<C-w>k` | Move to window up     |
 |**N**              |`<C-h>l`     |`<C-w>l` | Move to window right  |
 
-
 #### Increment / Decrement Numbers
-
 
 |MODE        |Keymaps      |Command   |Descripion |
 |:----:      |:----        |:----:    |:----      |
 |**Any**     |`<Leader>=`  |`<C-a>`   | Increment |
 |**Any**     |`<Leader>-`  |`<C-x>`   | Decrement |
-
 
 #### Copy and paste
 
@@ -244,6 +264,17 @@ Configuração de alguns atalhos para o neovim.
 |**Any**    |`<Leader>Y`  |`"*y`   | Copy to Primary Area    |
 |**Any**    |`<Leader>P`  |`"*p`   | Paste from Primary Area |
 
+#### Spell Check
+
+|MODE               |Keymaps   |Command  |Descripion                       |
+|:----:             |:----     | :----:  |:----                            |
+|**N**              |`]s`      |` `      | Next wrong word                 |
+|**N**              |`[s`      |` `      | Previous wrong word             |
+|**N**              |`z=`      |` `      | Show sugestions                 |
+|**N**              |`zg`      |` `      | Add current word to dictionary  |
+|**N**              |`zug`     |` `      | Remove a word added by mistake  |
+
+<!-- Obs: Configurar para keymaps para facilitar o uso. -->
 
 <!-- TABEL MODEL  -->
 <!-- |MODE               |Keymaps      |Command            |Descripion      | -->
@@ -257,7 +288,6 @@ Espaço para observações sobre os plugins.
 #### Nvim Tree keymaps
 
 Comandos básicos para NvimTree.
-
 
 |Default Keymaps |Command         |Descripion      |
 |:----           |     :----:     |:----           |

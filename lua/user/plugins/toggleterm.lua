@@ -13,7 +13,7 @@ return {
         {
             -- size can be a number or function which is passed the current terminal
             size = 22,
-            open_mapping = [[<leader>t]],
+            open_mapping = [[<leader>t]],-- TODO: Change keymap to open toogleterm.
             hide_numbers = true, -- hide the number column in toggleterm buffers
             shade_filetypes = {},
             shade_terminals = false, -- NOTE: this option takes priority over highlights specified so if you specify Normal highlights you should set this to false

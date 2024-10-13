@@ -62,7 +62,6 @@ autocmd("Filetype", {
     end
 })
 
-
 -- Set list character equal false by file type
 autocmd("Filetype", {
     pattern = {"gitcommit", "markdown", "text"},
@@ -71,6 +70,14 @@ autocmd("Filetype", {
     end
 })
 
+-- Set spell portuguese spellcheck
+autocmd("Filetype", {
+    pattern = { "markdown", "text"},
+    callback  = function ()
+      vim.opt.spell = true
+      vim.opt.spelllang = "pt_br"
+    end
+})
 
 -- SHOW WHITHESPACE
 -- MUST be inserted BEFORE the colorscheme command
