@@ -300,7 +300,11 @@ Keymap:
 
 #### Markdown
 
-Ainda não foi configurado atalhor para abrir o markdown-preview. Digite: `:MarkdownPreview`
+Ainda não foi configurado atalho para abrir o markdown-preview. Digite: `:MarkdownPreview`
+
+#### Tranparent
+
+Para habilitar digite `:TransparentEnable`.
 
 #### Telescope
 
