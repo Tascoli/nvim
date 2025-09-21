@@ -76,7 +76,7 @@ mkdir ~/.npm-global &&
 npm config set prefix '~/.npm-global' &&
 export PATH=~/.npm-global/bin:$PATH &&      # Temporary change PATH
 source ~/.profile &&
-npm install -g jshint &&
+npm install eslint --save-dev &&
 NPM_CONFIG_PREFIX=~/.npm-global
 ```
 
